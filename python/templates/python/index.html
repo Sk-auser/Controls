@@ -1,6 +1,7 @@
 {% extends "python/layout.html" %}
 {% load static %}
 {% block body %}
+<!--loops back based on what happens in views-->
     <h1>Enter Numbers</h1>
     {% if numbers %}
         <p>Numbers entered: {{ numbers }}</p>
@@ -8,7 +9,7 @@
     {% if average %}
         <p>The average of {{ numbers }} is {{ average }}.</p>
     {% else %}
-        <form method="post" action="{% url 'python:calculate_average' %}">
+        <form method="post" action="{% url 'python:calculate_average' %}"> <!--this line links to views-->
 
             {% csrf_token %}
 
@@ -18,3 +19,5 @@
         </form>
     {% endif %}
     {% endblock %}
+
+    

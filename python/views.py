@@ -23,5 +23,5 @@ def calculate_average(request):
                 return render(request, 'python/index.html', {'average': average, 'numbers': numbers, 'form': NumberForm()})
     else:
         form = NumberForm()
-    return render(request, 'python/index.html', {'form': form, 'numbers': numbers})
+    return render(request, 'python/index.html', {'form': form, 'numbers': numbers}) #loop back to index.html
 
